@@ -223,7 +223,7 @@ install_dependencies(){
 }
 
 install_dnsmasq(){
-    netstat -a -n -p | grep LISTEN | grep -P "\d+\.\d+\.\d+\.\d+:53\s+" > /dev/null && echo -e "[${red}Error${plain}] required port 53 already in use\n" && exit 1
+    #netstat -a -n -p | grep LISTEN | grep -P "\d+\.\d+\.\d+\.\d+:53\s+" > /dev/null && echo -e "[${red}Error${plain}] required port 53 already in use\n" && exit 1
     echo "安装Dnsmasq..."
     if check_sys packageManager yum; then
         error_detect_depends "yum -y install dnsmasq"
